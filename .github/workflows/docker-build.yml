@@ -11,6 +11,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
+      # setup-qemu - to enable the execution of different multi-architecture containers
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      # setup-buildx - to use an extended Docker CLI build capabilities
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
